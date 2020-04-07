@@ -12,18 +12,20 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "weatherforecast",
+      "launchUrl": "api/test",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "MYSQLCONNSTR_localdb": "Database=localdb;Data Source=127.0.0.1:53233;User Id=azure;Password=6#vWHD_$"
       }
     },
     "eLibrary": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "weatherforecast",
+      "launchUrl": "api/test",
       "applicationUrl": "https://localhost:5001;http://localhost:5000",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "MYSQLCONNSTR_localdb": "server=localhost;port=3306;database=famnitlibrary;user=root;password=1234"
       }
     }
   }

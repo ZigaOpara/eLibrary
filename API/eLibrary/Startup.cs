@@ -2,6 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using eLibrary.Providers.BookProvider;
+using eLibrary.Repositories;
+using eLibrary.Repositories.BookRepository;
+using eLibrary.Services.BookService;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +30,12 @@ namespace eLibrary
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddTransient(_ => new AppDb(Environment.GetEnvironmentVariable("MYSQLCONNSTR_localdb")));
+
+            services.AddScoped<IBookService, BookService>();
+            services.AddScoped<IBookProvider, BookProvider>();
+            services.AddScoped<IBookRepository, BookRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -2,17 +2,25 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\zigao\.Rider2019.3\config\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\zigao\.Rider2019.3\config\extensions" t="IncludeRecursive" />
     <e p="C:\Users\zigao\.Rider2019.3\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\zigao\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_eLibrary.-1073914602.00" t="ExcludeRecursive" />
     <e p="D:\Projects\eLibrary\API" t="IncludeFlat">
       <e p="eLibrary" t="IncludeRecursive">
+        <e p="AppDb.cs" t="Include" />
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
-          <e p="WeatherForecastController.cs" t="Include" />
+          <e p="BookController.cs" t="Include" />
+          <e p="TestController.cs" t="Include" />
+          <e p="UserController.cs" t="Include" />
         </e>
         <e p="eLibrary.csproj" t="IncludeRecursive" />
+        <e p="Models" t="Include">
+          <e p="Book.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -24,8 +32,29 @@
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
         </e>
+        <e p="Providers" t="Include">
+          <e p="BookProvider" t="Include">
+            <e p="BookProvider.cs" t="Include" />
+            <e p="IBookProvider.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Repositories" t="Include">
+          <e p="BookRepository" t="Include">
+            <e p="BookRepository.cs" t="Include" />
+            <e p="IBookRepository.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Services" t="Include">
+          <e p="BookService" t="Include">
+            <e p="BookService.cs" t="Include" />
+            <e p="IBookService.cs" t="Include" />
+          </e>
+          <e p="UserService" t="Include">
+            <e p="IUserService.cs" t="Include" />
+            <e p="UserService.cs" t="Include" />
+          </e>
+        </e>
         <e p="Startup.cs" t="Include" />
-        <e p="WeatherForecast.cs" t="Include" />
       </e>
       <e p="eLibrary.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
