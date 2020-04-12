@@ -1,8 +1,12 @@
-﻿using eLibrary.Services.UserService;
+﻿using System.Threading.Tasks;
+using eLibrary.Models;
+using eLibrary.Services.UserService;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eLibrary.Controllers
 {
+    [Route("api/user")]
+    [ApiController]
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
@@ -12,10 +16,17 @@ namespace eLibrary.Controllers
             _userService = userService;
         }
 
-        [HttpPost]
-        public IActionResult Authenticate(string name)
+        [HttpGet]
+        public async Task<IActionResult> GetUsers()
         {
-            var res =  _userService.Authenticate(name);
+            var res = await _userService.GetUsers();
+            return Ok(res);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Authenticate([FromBody] User user)
+        {
+            var res = await _userService.Authenticate(user.Username);
             return Ok(res);
         }
     }

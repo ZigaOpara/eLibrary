@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using eLibrary.Models;
 using eLibrary.Repositories;
@@ -39,6 +40,27 @@ namespace eLibrary.Providers.BookProvider
         public async Task<bool> DeleteBook(int id)
         {
             return await _bookRepository.DeleteBook(id);
+        }
+        
+        public async Task<Rate> AddRating(Rate rate)
+        {
+            var ratings = await GetRatings();
+            var existingRating =
+                ratings.FirstOrDefault(rating => rating.UserId == rate.UserId && rating.BookId == rate.BookId);
+            if (existingRating != null)
+            {
+                rate.Id = existingRating.Id;
+                return await _bookRepository.EditRating(rate);
+            }
+            
+            var res = await _bookRepository.AddRating(rate);
+            return res;
+        }
+
+        private async Task<List<Rate>> GetRatings()
+        {
+            var res = await _bookRepository.GetRatings();
+            return res;
         }
     }
 }

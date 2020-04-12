@@ -51,5 +51,12 @@ namespace eLibrary.Controllers
             var res = await _bookService.DeleteBook(id);
             return Ok(res);
         }
+
+        [HttpPost("rating")]
+        public async Task<IActionResult> AddRating(Rate rate)
+        {
+            var res = await _bookService.AddRating(rate);
+            return Ok(res);
+        }
     }
 }

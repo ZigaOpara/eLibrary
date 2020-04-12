@@ -1,0 +1,16 @@
+<div *ngIf="currentUser" class="navBarContainer row align-items-center">
+<!--  <p class="col-3" *ngIf="currentUser"><fa-icon [icon]="['fas', 'user']"></fa-icon> {{ currentUser }}</p>-->
+<!--  <p class="col-3 text-right" style="cursor: pointer" *ngIf="currentUser" (click)="logOut()">Log out</p>-->
+  <div class="col-3">
+    <a routerLink="/reservations">Reservations</a>
+  </div>
+  <p class="col-6 offset-3 text-center" routerLink="/home" [class.offset-3]="!currentUser" style="font-size: 24px; cursor: pointer">Famnit Library</p>
+  <div class="col-3 justify-content-end" *ngIf="currentUser">
+    <div ngbDropdown class="d-inline-block nav-dropdown">
+      <button class="btn" id="dropdownBasic1" ngbDropdownToggle><fa-icon [icon]="['fas', 'user']"></fa-icon> {{ currentUser }}</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem (click)="logOut()" style="color: black;">Log out</button>
+      </div>
+    </div>
+  </div>
+</div>

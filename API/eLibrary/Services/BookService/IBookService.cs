@@ -12,5 +12,6 @@ namespace eLibrary.Services.BookService
         Task<Book> AddBook(Book book);
         Task<Book> EditBook(Book book);
         Task<bool> DeleteBook(int id);
+        Task<Rate> AddRating(Rate rate);
     }
 }

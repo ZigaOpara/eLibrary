@@ -1,0 +1,25 @@
+.navBarContainer {
+  background-image: -webkit-linear-gradient(right, #006094 0%, #0d7fb9 100%);
+  color: white;
+  padding: 8px;
+  margin-left: 0;
+}
+
+p {
+  margin-bottom: 0;
+  font-size: 18px;
+  font-family: Arial, serif;
+}
+
+.nav-dropdown {
+  float: right;
+  button {
+    box-shadow: none;
+    color: white;
+  }
+}
+
+a {
+  font-family: Arial, serif;
+  color: white;
+}

@@ -11,5 +11,8 @@ namespace eLibrary.Repositories.BookRepository
         Task<Book> AddBook(Book book);
         Task<Book> EditBook(Book book);
         Task<bool> DeleteBook(int id);
+        Task<Rate> AddRating(Rate rate);
+        Task<Rate> EditRating(Rate rate);
+        Task<List<Rate>> GetRatings();
     }
 }

@@ -1,0 +1,37 @@
+<h2 class="text-center" *ngIf="currentUser && currentUser.role === 'user'">
+  All your reservations
+</h2>
+<h2 class="text-center" *ngIf="currentUser && currentUser.role === 'admin'">
+  All reservations
+</h2>
+
+<div class="col-8 offset-2">
+  <table class="table table-striped text-center">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">User</th>
+        <th scope="col">Book</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let reservation of r1; index as i">
+        <td>
+          {{ reservation.id }}
+        </td>
+        <td>{{ reservation.user }}</td>
+        <td>{{ reservation.book }}</td>
+        <td>
+          <button
+            (click)="removeReservation(reservation.id)"
+            class="btn text-danger"
+            style="box-shadow: none;"
+          >
+            <fa-icon [icon]="['far', 'trash-alt']" size="lg"></fa-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

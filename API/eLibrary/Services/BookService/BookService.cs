@@ -38,5 +38,11 @@ namespace eLibrary.Services.BookService
         {
             return await _bookProvider.DeleteBook(id);
         }
+
+        public async Task<Rate> AddRating(Rate rate)
+        {
+            var res = await _bookProvider.AddRating(rate);
+            return res;
+        }
     }
 }

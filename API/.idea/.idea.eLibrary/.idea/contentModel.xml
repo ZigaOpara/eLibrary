@@ -13,16 +13,19 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="BookController.cs" t="Include" />
+          <e p="ReservationController.cs" t="Include" />
           <e p="TestController.cs" t="Include" />
           <e p="UserController.cs" t="Include" />
         </e>
         <e p="eLibrary.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
           <e p="Book.cs" t="Include" />
+          <e p="Rate.cs" t="Include" />
+          <e p="Reservation.cs" t="Include" />
           <e p="User.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="netcoreapp3.1" t="Include">
               <e p="eLibrary.AssemblyInfo.cs" t="Include" />
             </e>
@@ -37,17 +40,37 @@
             <e p="BookProvider.cs" t="Include" />
             <e p="IBookProvider.cs" t="Include" />
           </e>
+          <e p="ReservationProvider" t="Include">
+            <e p="IReservationProvider.cs" t="Include" />
+            <e p="ReservationProvider.cs" t="Include" />
+          </e>
+          <e p="UserProvider" t="Include">
+            <e p="IUserProvider.cs" t="Include" />
+            <e p="UserProvider.cs" t="Include" />
+          </e>
         </e>
         <e p="Repositories" t="Include">
           <e p="BookRepository" t="Include">
             <e p="BookRepository.cs" t="Include" />
             <e p="IBookRepository.cs" t="Include" />
           </e>
+          <e p="ReservationRepository" t="Include">
+            <e p="IReservationRepository.cs" t="Include" />
+            <e p="ReservationRepository.cs" t="Include" />
+          </e>
+          <e p="UserRepository" t="Include">
+            <e p="IUserRepository.cs" t="Include" />
+            <e p="UserRepository.cs" t="Include" />
+          </e>
         </e>
         <e p="Services" t="Include">
           <e p="BookService" t="Include">
             <e p="BookService.cs" t="Include" />
             <e p="IBookService.cs" t="Include" />
+          </e>
+          <e p="ReservationService" t="Include">
+            <e p="IReservationService.cs" t="Include" />
+            <e p="ReservationService.cs" t="Include" />
           </e>
           <e p="UserService" t="Include">
             <e p="IUserService.cs" t="Include" />

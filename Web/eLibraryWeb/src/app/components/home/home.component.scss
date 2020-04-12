@@ -1,0 +1,20 @@
+.book-buttons button:focus {
+  box-shadow: none;
+}
+
+.star {
+  position: relative;
+  font-size: 2rem;
+  color: #b0c4de;
+}
+
+.full {
+  color: #007bff;
+}
+
+.half {
+  position: absolute;
+  display: inline-block;
+  overflow: hidden;
+  color: #007bff;
+}

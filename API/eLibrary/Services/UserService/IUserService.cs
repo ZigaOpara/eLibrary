@@ -1,9 +1,12 @@
-﻿using eLibrary.Models;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using eLibrary.Models;
 
 namespace eLibrary.Services.UserService
 {
     public interface IUserService
     {
-        User Authenticate(string name);
+        Task<IEnumerable<User>> GetUsers();
+        Task<User> Authenticate(string username);
     }
 }
